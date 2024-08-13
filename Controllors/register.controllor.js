@@ -23,7 +23,7 @@ export default async function  Register(req,  res) {
 
      try {
 
-     const user = User.findOne({phone})
+     const user =  await  User.findOne({phone})
 
      const salt = await bcrypt.genSalt(10)
 
@@ -38,7 +38,7 @@ export default async function  Register(req,  res) {
 
     phone,
 
-    password
+    password:  hashedpassword 
       
 
 
