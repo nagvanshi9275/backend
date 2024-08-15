@@ -23,7 +23,7 @@ export default async function  Register(req,  res) {
 
      try {
 
-     const user =  await  User.findOne({phone})
+     let user =  await  User.findOne({phone})
 
      const salt = await bcrypt.genSalt(10)
 
