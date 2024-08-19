@@ -1,8 +1,11 @@
 import express from 'express';
+
 import cors from 'cors';
 import Connect_db from './database/data.js';
 import 'dotenv/config';
 import router from './Routes/route.js';
+
+
 
 const app = express();
 const port = process.env.PORT || 4000;
@@ -25,3 +28,22 @@ app.use('/api/users', router);
 app.listen(port, () => {
   console.log(`Server is running zaalima at http://localhost:${port}`);
 });
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

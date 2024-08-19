@@ -1,0 +1,22 @@
+
+
+
+POST http://localhost:4000/api/users/jobs
+Content-Type: application/json
+
+{
+  "heading": "Job Title",
+  "description": "Job Description",
+  "location": "Job Location",
+  "sallary": "50000",
+  "phone": "1234567890"
+}
+
+
+
+
+
+
+
+
+
