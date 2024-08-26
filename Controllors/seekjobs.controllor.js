@@ -53,7 +53,7 @@ export default async function seekjobs1(req, res) {
 
    seekdata.age = [...seekdata.age, age]
 
-   await ServiceWorkerContainerdata.save();
+   await seekdata.save();
 
    res.status(200).json({message: "seekingjob updated successfully", seekdata})
 
