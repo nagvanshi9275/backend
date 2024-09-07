@@ -41,7 +41,7 @@ export default async function Jobs1(req, res) {
 
   res.status(201).json({message: "jobdata added successfully", jobdata})
 
-   } else {
+   } else { 
 
    jobdata.heading = [...jobdata.heading, heading ]
 
