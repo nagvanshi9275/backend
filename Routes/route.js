@@ -16,7 +16,9 @@ import seekjobs1 from "../Controllors/seekjobs.controllor.js";
 
 import Fetchjobs from "../Controllors/Fetchjob.js";
 
+import Exp1 from "../Controllors/exp.controllor.js"
 
+import Expfetch from "../Controllors/expfetch.controllor.js";
 const router = express.Router()
 
 
@@ -31,6 +33,10 @@ router.post('/getdata', Getdata)
 router.post('/seekjobs', seekjobs1)
 
 router.post('/fetchjobs', Fetchjobs)
+
+router.post('/exp', Exp1)
+
+router.post('/expfetch', Expfetch)
 
 export default router
 
