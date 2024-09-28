@@ -19,6 +19,12 @@ import Fetchjobs from "../Controllors/Fetchjob.js";
 import Exp1 from "../Controllors/exp.controllor.js"
 
 import Expfetch from "../Controllors/expfetch.controllor.js";
+
+
+import Talent from "../Controllors/talent.controllor.js";
+
+
+
 const router = express.Router()
 
 
@@ -37,6 +43,8 @@ router.post('/fetchjobs', Fetchjobs)
 router.post('/exp', Exp1)
 
 router.post('/expfetch', Expfetch)
+
+router.post('/talent', Talent)
 
 export default router
 

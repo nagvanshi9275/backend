@@ -7,7 +7,7 @@ export default async function Fetchjobs(req, res) {
   try {
     const { heading, phone } = req.body;
 
-    // Find user by phone number
+  
     const user = await User.findOne({ phone });
     if (!user) return res.status(404).json({ message: "User not found" });
 
@@ -27,7 +27,7 @@ export default async function Fetchjobs(req, res) {
         .map((jobHeading, index) => (jobHeading === heading ? index : -1))
         .filter((index) => index !== -1);
 
-      // Filter relevant fields using jobindex
+      
       const relevantheading = jobindex.map((index) => doc.heading[index]);
       const relevantdescription = jobindex.map((index) => doc.description[index]);
       const relevantlocation = jobindex.map((index) => doc.location[index]);

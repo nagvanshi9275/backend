@@ -1,14 +1,15 @@
 
 import User from "../Model/user.model.js";
 
-
+            
 import Jobs from "../Model/jobs.model.js";
 
 import seekjobs from "../Model/seek.model.js";
 
 export default async function seekjobs1(req, res) {
 
-
+   
+      
   try{
 
     const {profession, place, experience,  age,  phone, name } = await req.body
