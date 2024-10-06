@@ -71,7 +71,21 @@ District: {
                     
                     
                     
-                    }
+                    },
+
+                    profilepic: {
+
+                        type: String,
+                        
+                        required: true,
+                        
+                        
+                        
+                        
+                        }
+
+
+
 
 
 

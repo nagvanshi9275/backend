@@ -3,7 +3,7 @@ import Profile from "../Model/profile.model.js";
 
 export default async function createOrUpdateProfile(req, res) {
     try {
-        const { phone, District, state, skills, Dihari, Name } = req.body;
+        const { phone, District, state, skills, Dihari, Name, profilepic } = req.body;
 
         // Check if the user 
         const user = await User.findOne({ phone });
@@ -13,7 +13,7 @@ export default async function createOrUpdateProfile(req, res) {
         // Check if a profile already exists for the user, and update or create accordingly
         let profileData = await Profile.findOneAndUpdate(
             { phone }, // Find profile by phone
-            { District, state, skills, Dihari, Name }, // Fields to update or set
+            { District, state, skills, Dihari, Name, profilepic }, // Fields to update or set
             { new: true, upsert: true } // Return the updated document and create if not found
         );
 
@@ -27,3 +27,9 @@ export default async function createOrUpdateProfile(req, res) {
         res.status(500).json({ message: "An error occurred while processing the request" });
     }
 }
+
+
+
+
+
+
