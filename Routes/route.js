@@ -23,6 +23,7 @@ import Expfetch from "../Controllors/expfetch.controllor.js";
 
 import Talent from "../Controllors/talent.controllor.js";
 
+import Profile1 from "../Controllors/profile.controllor.js";
 
 
 const router = express.Router()
@@ -45,6 +46,8 @@ router.post('/exp', Exp1)
 router.post('/expfetch', Expfetch)
 
 router.post('/talent', Talent)
+
+router.post('/profile', Profile1)
 
 export default router
 
