@@ -50,9 +50,9 @@ export default async function seekjobs1(req, res) {
 
  seekdata.place = [...seekdata.place, place]
 
-   seekdata.experience = [...seekdata.experience, experience]
+   seekdata.experience = experience
 
-   seekdata.age = [...seekdata.age, age]
+   seekdata.age = age
 
    await seekdata.save();
 

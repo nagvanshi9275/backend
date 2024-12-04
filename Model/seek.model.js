@@ -23,7 +23,7 @@ required: true
 
 experience: {
 
-type: [String],
+type: String,
 
 required: true
 
@@ -32,7 +32,7 @@ required: true
 
 age: {
 
-type: [String],
+type: String,
 
 required: true
 
