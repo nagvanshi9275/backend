@@ -5,7 +5,7 @@ import User from "../Model/user.model.js";
 
 //import bcrypt from "bcryptjs";
 
-import bcrypt from 'bcrypt';
+import bcrypt from 'bcryptjs';
 
 
 //import { JsonWebTokenError } from "jsonwebtoken";
