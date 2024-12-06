@@ -34,7 +34,7 @@ export default async function Jobs1(req, res) {
    name: user.name
 
 
-
+ 
    })
 
   await jobdata.save()

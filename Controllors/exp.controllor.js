@@ -2,7 +2,7 @@ import Exp from "../Model/exp.model.js";
 
  
 
-   
+     
 
 export default async function Exp1(req, res) {
   try {

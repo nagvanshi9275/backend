@@ -29,6 +29,8 @@ import Profile1 from "../Controllors/profile.controllor.js";
 
 import Prfetch from "../Controllors/prfetch.controllor.js";
 
+import Workapply from "../Controllors/workapply.controlor.js";
+
 const router = express.Router()
 
 
@@ -53,6 +55,8 @@ router.post('/talent', Talent)
 router.post('/profile', Profile1)
 
 router.post('/prfetch',  Prfetch)
+
+router.post('/wkapply', Workapply)
 
 export default router
 

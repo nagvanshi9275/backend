@@ -7,7 +7,7 @@ export default async function Fetchjobs(req, res) {
   try {
     const { heading, phone } = req.body;
 
-  
+      
     const user = await User.findOne({ phone });
     if (!user) return res.status(404).json({ message: "User not found" });
 

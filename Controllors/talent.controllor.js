@@ -1,6 +1,7 @@
-
+  
+    
 import User from "../Model/user.model.js";
-import seekjobs from "../Model/seek.model.js"; // Assuming the model name is `seekjobs`
+import seekjobs from "../Model/seek.model.js";
 
 export default async function Talent(req, res) {
   try {
@@ -32,8 +33,12 @@ export default async function Talent(req, res) {
       // Extract relevant headings and locations based on the matched indices
       const relevantHeading = talentIndex.map((index) => doc.profession[index]);
       const relevantLocation = talentIndex.map((index) => doc.place[index]);
-      const relevantexperience = talentIndex.map((index) => doc.experience[index])
-      const relevantage = talentIndex.map((index) => doc.age[index]);
+
+      // Since age and experience are strings, they cannot have multiple indices.
+      // We directly take the single value for these fields from the document.
+      const relevantexperience = doc.experience;
+      const relevantage = doc.age;
+
       // Convert Mongoose document to plain object and return filtered data
       return {
         ...doc.toObject(), // Ensures that the Mongoose document is converted to a plain JS object
@@ -46,7 +51,6 @@ export default async function Talent(req, res) {
 
     // Respond with the filtered jobs
     res.status(200).json({ message: "Talent filtered successfully", filterjobs });
-
   } catch (error) {
     // Log the error and send a 500 status code for server error
     console.error(error.message);
@@ -54,9 +58,7 @@ export default async function Talent(req, res) {
   }
 }
 
-
-
-
+    
 
 
 
